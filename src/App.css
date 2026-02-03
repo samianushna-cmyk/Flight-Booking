@@ -1,0 +1,261 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero-single-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* navbar top, footer bottom */
+  overflow-x: hidden;
+}
+/* =========================
+   HERO CONTENT (LEFT-ALIGNED)
+========================= */
+.hero-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* align left */
+  align-items: center;
+  padding-left: 50px; /* spacing from left edge */
+  text-align: left; /* left-align text */
+  padding-right: 50px; /* optional, for spacing on right */
+}
+
+.hero-text-overlay {
+  color: white;
+  max-width: 600px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.3); /* transparent like glass */
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-links .active {
+  font-weight: 600;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-btn {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.signup-btn {
+  border: none;
+  background: #ffcc00;
+  color: #003566;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text-overlay {
+  color: white;
+  max-width: 600px;
+}
+
+.hero-text-overlay h1 {
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text-overlay h1 span {
+  color: #ffcc00;
+}
+
+.moving-text {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.book-btn {
+  padding: 12px 30px;
+  background: #ffcc00;
+  color: #003566;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.book-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* transparent like navbar */
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffcc00;
+  flex: 1;
+}
+
+.footer-sections {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex: 3;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ffcc00;
+}
+
+.footer-column ul li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #fff;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.footer-column ul li:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 20px;
+    justify-content: center;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text-overlay h1 {
+    font-size: 28px;
+  }
+  .moving-text {
+    font-size: 14px;
+  }
+}

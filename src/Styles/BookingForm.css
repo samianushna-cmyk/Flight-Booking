@@ -1,0 +1,121 @@
+.confirmation-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Overlay for better readability */
+.confirmation-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.confirmation-page h1 {
+  color: #ffd700; /* gold text */
+  margin-bottom: 40px;
+  font-size: 36px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.ticket-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 35px 45px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+  padding-bottom: 15px;
+}
+
+.ticket-header h2 {
+  color: #ffd700;
+  font-size: 28px;
+}
+
+.flight-number {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ffd700;
+  color: #0a1a2f;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.ticket-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ticket-section {
+  flex: 1 1 250px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticket-section h3 {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.ticket-section p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+.print-btn {
+  align-self: center;
+  padding: 12px 30px;
+  background: #ffd700;
+  color: #0a1a2f;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+.print-btn:hover {
+  background: #e6c200;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ticket-body {
+    flex-direction: column;
+  }
+}

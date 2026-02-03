@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Page */
+.pref-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pref-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Card */
+.pref-card {
+  position: relative;
+  width: 620px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.pref-card h2 {
+  text-align: center;
+  color: #1a73e8;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 18px;
+}
+
+.section h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Options */
+.options {
+  display: flex;
+  gap: 12px;
+}
+
+.option {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #d0d7e2;
+  cursor: pointer;
+  background: #f9fbff;
+  font-size: 14px;
+}
+
+.option.active {
+  background: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+/* Select */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d7e2;
+  font-size: 14px;
+}
+
+/* Checkbox */
+.checkbox label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Preview */
+.preview {
+  margin-top: 18px;
+  padding: 14px;
+  background: #f1f6ff;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.preview h4 {
+  margin-bottom: 8px;
+  color: #1a73e8;
+}
+
+/* Button */
+.confirm-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: #1a73e8;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: #1558b0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .pref-card {
+    width: 92%;
+  }
+}
