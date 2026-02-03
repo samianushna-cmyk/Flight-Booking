@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "../styles/FlightPreferences.css";
+import "../Styles/FlightPreferences.css";
 import bgImg from "../assets/passdetails.jpeg";
 
 const FlightPreferences = () => {
